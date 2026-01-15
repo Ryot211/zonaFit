@@ -42,6 +42,9 @@ public class ZonaFitForma extends JFrame{
                 cargarClienteSeleccionado();
             }
         });
+        eliminarButton.addActionListener(e -> {
+            eliminarCliente();
+        });
     }
 
     private void iniciarForma(){
@@ -101,6 +104,23 @@ public class ZonaFitForma extends JFrame{
             listarClientes();
         }
 
+    }
+    private void eliminarCliente(){
+       var renglon = clientesTabla.getSelectedRow();
+       if(renglon != -1){
+
+           var cliente = clienteServicio.buscarClientePorId(idCliente);
+           if(cliente!= null){
+               this.clienteServicio.eliminarCliente(cliente);
+               mostrarMensaje("Cliente eliminado con exito");
+               limpiarFormulario();
+               listarClientes();
+           }else{
+               mostrarMensaje("Cliente no encontrado");
+           }
+       }else{
+           mostrarMensaje("Seleccione al menos un cliente");
+       }
     }
     private void cargarClienteSeleccionado(){
         var renglon = clientesTabla.getSelectedRow();
