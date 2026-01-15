@@ -44,7 +44,9 @@
             <children>
               <component id="12887" class="javax.swing.JTable" binding="clientesTabla" custom-create="true">
                 <constraints/>
-                <properties/>
+                <properties>
+                  <showHorizontalLines value="true"/>
+                </properties>
               </component>
             </children>
           </scrollpane>
