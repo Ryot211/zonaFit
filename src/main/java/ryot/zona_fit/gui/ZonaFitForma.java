@@ -56,10 +56,18 @@ public class ZonaFitForma extends JFrame{
     }
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        this.tableModelClientes = new DefaultTableModel(0,4);
+        //this.tableModelClientes = new DefaultTableModel(0,4);
+        this.tableModelClientes = new DefaultTableModel(0,4){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+
+        };
         String[] cabeceros = {"ID", "Nombre", "Apellido", "Membresia"};
         this.tableModelClientes.setColumnIdentifiers(cabeceros);
         this.clientesTabla = new JTable(this.tableModelClientes);
+        this.clientesTabla.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         // Cargar listado de clientes
         listarClientes();
 
