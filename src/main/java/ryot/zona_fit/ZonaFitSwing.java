@@ -1,5 +1,6 @@
 package ryot.zona_fit;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -10,6 +11,8 @@ import javax.swing.*;
 @SpringBootApplication
 public class ZonaFitSwing {
     public static void main(String[] args) {
+        // configuramos el modo oscuro
+        FlatDarculaLaf.setup();
         // Instanciar la fabrica de Spring
         ConfigurableApplicationContext contextoSpring =
                 new SpringApplicationBuilder(ZonaFitSwing.class)
