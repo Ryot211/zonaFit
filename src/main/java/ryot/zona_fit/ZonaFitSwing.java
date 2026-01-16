@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import ryot.zona_fit.gui.ZonaFitForma;
 
 import javax.swing.*;
-@SpringBootApplication
+
 public class ZonaFitSwing {
     public static void main(String[] args) {
         // configuramos el modo oscuro
