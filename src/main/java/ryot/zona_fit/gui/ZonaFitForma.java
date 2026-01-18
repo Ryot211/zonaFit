@@ -1,6 +1,5 @@
 package ryot.zona_fit.gui;
 
-import com.formdev.flatlaf.FlatDarculaLaf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ryot.zona_fit.modelo.Cliente;
@@ -48,8 +47,8 @@ public class ZonaFitForma extends JFrame{
     }
 
     private void iniciarForma(){
-        FlatDarculaLaf.setup(); // agregamos look and fell modo osucro
-        setContentPane(panelPrincipal);
+//        FlatDarculaLaf.setup(); // agregamos look and fell modo osucro
+//        setContentPane(panelPrincipal);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800,600);
         setLocationRelativeTo(null);// centra la ventana
